@@ -11,14 +11,19 @@ attributes = ('names.common,names.official,names.native,capitals,region,'
 
 key=os.getenv('API_KEY')
 
-response = requests.get(
-    f'https://api.restcountries.com/countries/v5?response_fields={attributes}&limit=5',
-    headers={'Authorization': f'{key}'}
-)
+def extract_data():
+    response = requests.get(
+        f'https://api.restcountries.com/countries/v5?response_fields={attributes}&limit=5',
+        headers={'Authorization': f'{key}'}
+    )
 
-response = response.json()
+    response = response.json()
+    
+    data = response['data']['objects']
+    
+    return data
+    
 
 
-
-print(response['data']['objects'])
+print(extract_data())
 
