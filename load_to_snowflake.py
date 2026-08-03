@@ -88,4 +88,4 @@ def transfer_minio_data_to_snowflake(bucket, file_key, target_table):
             os.remove(local_temp_path)
 
 
-transfer_minio_data_to_snowflake('triplens', 'raw/triplens_global.json', 'COUNTRIES_RAW')
+# transfer_minio_data_to_snowflake('triplens', 'raw/triplens_global.json', 'COUNTRIES_RAW')
