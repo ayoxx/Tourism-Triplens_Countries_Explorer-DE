@@ -1,6 +1,6 @@
-from extract import extract_data
-from load_to_bucket import load_to_bucket
-from load_to_snowflake import transfer_minio_data_to_snowflake
+from include.extract import extract_data
+from include.load_to_bucket import load_to_bucket
+from include.load_to_snowflake import transfer_minio_data_to_snowflake
 import time
 
 api_response = extract_data()
